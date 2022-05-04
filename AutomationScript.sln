@@ -1,0 +1,184 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{53BE1C42-ED15-4836-AD0C-40932CE7BAB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{9EA2CE79-D1DD-4D2C-B4D2-18326664FBCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{10B59CFB-9A10-4988-BEF1-24BBE830BF56}"
+	ProjectSection(SolutionItems) = preProject
+		Dlls\readme.txt = Dlls\readme.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{5AC27C4E-E737-4A1D-83EC-D6F7A9F73F3D}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\readme.txt = Documentation\readme.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis", "Code Analysis", "{752A014E-9181-49FA-B772-5C8F724744A4}"
+	ProjectSection(SolutionItems) = preProject
+		Internal\Code Analysis\qaction-debug.ruleset = Internal\Code Analysis\qaction-debug.ruleset
+		Internal\Code Analysis\qaction-release.ruleset = Internal\Code Analysis\qaction-release.ruleset
+		Internal\Code Analysis\SonarLint-QuickActions-Active.ruleset = Internal\Code Analysis\SonarLint-QuickActions-Active.ruleset
+		Internal\Code Analysis\SonarLint-QuickActions-Inactive.ruleset = Internal\Code Analysis\SonarLint-QuickActions-Inactive.ruleset
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationScript_ClassLibrary", "AutomationScript_ClassLibrary\AutomationScript_ClassLibrary.csproj", "{C2C13560-420C-4538-9287-D6AD06387685}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AddNewSwitch", "AddNewSwitch", "{45CE5779-BA55-40CF-A62C-E7604AC9F72D}"
+	ProjectSection(SolutionItems) = preProject
+		AddNewSwitch.xml = AddNewSwitch.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{D950DD08-09BA-4352-8FD3-3D9724C8EF7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddNewSwitch_1", "AddNewSwitch_1\AddNewSwitch_1.csproj", "{4288B0A4-926A-41DE-A335-0B25E415BF40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecommissionSwitch", "DecommissionSwitch", "{A0545F30-4D64-4A04-9F0B-8069ABB8D336}"
+	ProjectSection(SolutionItems) = preProject
+		DecommissionSwitch.xml = DecommissionSwitch.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{0334EDC1-E5A3-4E40-AA3F-EA06FE52AA18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecommissionSwitch_1", "DecommissionSwitch_1\DecommissionSwitch_1.csproj", "{30419710-54F7-47BE-8926-8C7DFC6E1DF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HandleSwitchAlarm", "HandleSwitchAlarm", "{B6CD6009-E551-4932-98D0-2B1A65A8523D}"
+	ProjectSection(SolutionItems) = preProject
+		HandleSwitchAlarm.xml = HandleSwitchAlarm.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{B1F540B0-8348-4BBC-8874-BC43F2959BE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleSwitchAlarm_1", "HandleSwitchAlarm_1\HandleSwitchAlarm_1.csproj", "{E361DA52-7119-4A2C-9BBC-4D451C4A539F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SendSwitchHealthReport", "SendSwitchHealthReport", "{788FF5AB-6138-4575-980F-BF2EE97CFF04}"
+	ProjectSection(SolutionItems) = preProject
+		SendSwitchHealthReport.xml = SendSwitchHealthReport.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{AB13E5F8-CA8E-4EB1-BCDB-1ED833BD3D31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendSwitchHealthReport_1", "SendSwitchHealthReport_1\SendSwitchHealthReport_1.csproj", "{D4D0FACF-5C04-46F4-86C3-CADACC35ACF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddNewSwitch_63000", "AddNewSwitch_63000\AddNewSwitch_63000.csproj", "{E4C50247-CFE1-4D47-9E0B-B9316699261E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecommissionSwitch_63000", "DecommissionSwitch_63000\DecommissionSwitch_63000.csproj", "{918FAFC0-3154-40A5-9DEE-FB44D4183AA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProvisionCertificationSetup", "ProvisionCertificationSetup", "{EB316CC5-4B9C-43F6-909D-1754FC5E10BE}"
+	ProjectSection(SolutionItems) = preProject
+		ProvisionCertificationSetup.xml = ProvisionCertificationSetup.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{EE91DF62-55E6-47D0-A40B-FAB6CF270803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionCertificationSetup_1", "ProvisionCertificationSetup_1\ProvisionCertificationSetup_1.csproj", "{F85D8CA7-D19D-4F7F-873F-4FA03DC08919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvisionCertificationSetup_63000", "ProvisionCertificationSetup_63000\ProvisionCertificationSetup_63000.csproj", "{3D85C1D0-CC9B-4851-BC91-8D76D549C794}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SwitchToBackupSpine", "SwitchToBackupSpine", "{570B639A-BDD4-4CE4-A318-468975E04BDC}"
+	ProjectSection(SolutionItems) = preProject
+		SwitchToBackupSpine.xml = SwitchToBackupSpine.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{64EDC216-55B5-4585-A52E-605694DBD54C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchToBackupSpine_1", "SwitchToBackupSpine_1\SwitchToBackupSpine_1.csproj", "{1F2343FF-97F3-4616-98A9-FE2D66A02828}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToggleSwitchState", "ToggleSwitchState", "{E27F3182-5161-429A-995B-089C4B6D07DF}"
+	ProjectSection(SolutionItems) = preProject
+		ToggleSwitchState.xml = ToggleSwitchState.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{A31556B7-4637-4DCC-AAC4-1E5BF2E9698C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleSwitchState_1", "ToggleSwitchState_1\ToggleSwitchState_1.csproj", "{B7E870D7-2A58-46FF-89B4-E00477168280}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C13560-420C-4538-9287-D6AD06387685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C13560-420C-4538-9287-D6AD06387685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C13560-420C-4538-9287-D6AD06387685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C13560-420C-4538-9287-D6AD06387685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4288B0A4-926A-41DE-A335-0B25E415BF40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4288B0A4-926A-41DE-A335-0B25E415BF40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4288B0A4-926A-41DE-A335-0B25E415BF40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4288B0A4-926A-41DE-A335-0B25E415BF40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30419710-54F7-47BE-8926-8C7DFC6E1DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30419710-54F7-47BE-8926-8C7DFC6E1DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30419710-54F7-47BE-8926-8C7DFC6E1DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30419710-54F7-47BE-8926-8C7DFC6E1DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E361DA52-7119-4A2C-9BBC-4D451C4A539F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E361DA52-7119-4A2C-9BBC-4D451C4A539F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E361DA52-7119-4A2C-9BBC-4D451C4A539F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E361DA52-7119-4A2C-9BBC-4D451C4A539F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D0FACF-5C04-46F4-86C3-CADACC35ACF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D0FACF-5C04-46F4-86C3-CADACC35ACF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D0FACF-5C04-46F4-86C3-CADACC35ACF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D0FACF-5C04-46F4-86C3-CADACC35ACF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4C50247-CFE1-4D47-9E0B-B9316699261E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4C50247-CFE1-4D47-9E0B-B9316699261E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4C50247-CFE1-4D47-9E0B-B9316699261E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4C50247-CFE1-4D47-9E0B-B9316699261E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918FAFC0-3154-40A5-9DEE-FB44D4183AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918FAFC0-3154-40A5-9DEE-FB44D4183AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918FAFC0-3154-40A5-9DEE-FB44D4183AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918FAFC0-3154-40A5-9DEE-FB44D4183AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F85D8CA7-D19D-4F7F-873F-4FA03DC08919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85D8CA7-D19D-4F7F-873F-4FA03DC08919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85D8CA7-D19D-4F7F-873F-4FA03DC08919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85D8CA7-D19D-4F7F-873F-4FA03DC08919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D85C1D0-CC9B-4851-BC91-8D76D549C794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D85C1D0-CC9B-4851-BC91-8D76D549C794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D85C1D0-CC9B-4851-BC91-8D76D549C794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D85C1D0-CC9B-4851-BC91-8D76D549C794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F2343FF-97F3-4616-98A9-FE2D66A02828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F2343FF-97F3-4616-98A9-FE2D66A02828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F2343FF-97F3-4616-98A9-FE2D66A02828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F2343FF-97F3-4616-98A9-FE2D66A02828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E870D7-2A58-46FF-89B4-E00477168280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E870D7-2A58-46FF-89B4-E00477168280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E870D7-2A58-46FF-89B4-E00477168280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E870D7-2A58-46FF-89B4-E00477168280}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{752A014E-9181-49FA-B772-5C8F724744A4} = {53BE1C42-ED15-4836-AD0C-40932CE7BAB7}
+		{C2C13560-420C-4538-9287-D6AD06387685} = {53BE1C42-ED15-4836-AD0C-40932CE7BAB7}
+		{45CE5779-BA55-40CF-A62C-E7604AC9F72D} = {9EA2CE79-D1DD-4D2C-B4D2-18326664FBCA}
+		{D950DD08-09BA-4352-8FD3-3D9724C8EF7F} = {45CE5779-BA55-40CF-A62C-E7604AC9F72D}
+		{4288B0A4-926A-41DE-A335-0B25E415BF40} = {D950DD08-09BA-4352-8FD3-3D9724C8EF7F}
+		{A0545F30-4D64-4A04-9F0B-8069ABB8D336} = {9EA2CE79-D1DD-4D2C-B4D2-18326664FBCA}
+		{0334EDC1-E5A3-4E40-AA3F-EA06FE52AA18} = {A0545F30-4D64-4A04-9F0B-8069ABB8D336}
+		{30419710-54F7-47BE-8926-8C7DFC6E1DF9} = {0334EDC1-E5A3-4E40-AA3F-EA06FE52AA18}
+		{B6CD6009-E551-4932-98D0-2B1A65A8523D} = {9EA2CE79-D1DD-4D2C-B4D2-18326664FBCA}
+		{B1F540B0-8348-4BBC-8874-BC43F2959BE1} = {B6CD6009-E551-4932-98D0-2B1A65A8523D}
+		{E361DA52-7119-4A2C-9BBC-4D451C4A539F} = {B1F540B0-8348-4BBC-8874-BC43F2959BE1}
+		{788FF5AB-6138-4575-980F-BF2EE97CFF04} = {9EA2CE79-D1DD-4D2C-B4D2-18326664FBCA}
+		{AB13E5F8-CA8E-4EB1-BCDB-1ED833BD3D31} = {788FF5AB-6138-4575-980F-BF2EE97CFF04}
+		{D4D0FACF-5C04-46F4-86C3-CADACC35ACF2} = {AB13E5F8-CA8E-4EB1-BCDB-1ED833BD3D31}
+		{E4C50247-CFE1-4D47-9E0B-B9316699261E} = {D950DD08-09BA-4352-8FD3-3D9724C8EF7F}
+		{918FAFC0-3154-40A5-9DEE-FB44D4183AA2} = {0334EDC1-E5A3-4E40-AA3F-EA06FE52AA18}
+		{EB316CC5-4B9C-43F6-909D-1754FC5E10BE} = {9EA2CE79-D1DD-4D2C-B4D2-18326664FBCA}
+		{EE91DF62-55E6-47D0-A40B-FAB6CF270803} = {EB316CC5-4B9C-43F6-909D-1754FC5E10BE}
+		{F85D8CA7-D19D-4F7F-873F-4FA03DC08919} = {EE91DF62-55E6-47D0-A40B-FAB6CF270803}
+		{3D85C1D0-CC9B-4851-BC91-8D76D549C794} = {EE91DF62-55E6-47D0-A40B-FAB6CF270803}
+		{570B639A-BDD4-4CE4-A318-468975E04BDC} = {9EA2CE79-D1DD-4D2C-B4D2-18326664FBCA}
+		{64EDC216-55B5-4585-A52E-605694DBD54C} = {570B639A-BDD4-4CE4-A318-468975E04BDC}
+		{1F2343FF-97F3-4616-98A9-FE2D66A02828} = {64EDC216-55B5-4585-A52E-605694DBD54C}
+		{E27F3182-5161-429A-995B-089C4B6D07DF} = {9EA2CE79-D1DD-4D2C-B4D2-18326664FBCA}
+		{A31556B7-4637-4DCC-AAC4-1E5BF2E9698C} = {E27F3182-5161-429A-995B-089C4B6D07DF}
+		{B7E870D7-2A58-46FF-89B4-E00477168280} = {A31556B7-4637-4DCC-AAC4-1E5BF2E9698C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7699A0F-1C9D-42C5-89F8-D2279BECD180}
+	EndGlobalSection
+EndGlobal

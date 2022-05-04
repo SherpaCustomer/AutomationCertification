@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+	<Name>AddNewSwitch</Name>
+	<Description></Description>
+	<Type>Automation</Type>
+	<Author>SKYLINE2\Joey</Author>
+	<CheckSets>FALSE</CheckSets>
+	<Folder></Folder>
+
+	<Protocols>
+	</Protocols>
+
+	<Memory>
+	</Memory>
+
+	<Parameters>
+	</Parameters>
+
+	<Script>
+		<Exe id="63000" type="csharp">
+			<Param type="libraryName">DIS Class Library</Param>
+			<Param type="preCompile">true</Param>
+			<Value>
+				<![CDATA[[Project:AddNewSwitch_63000]]]>
+			</Value>
+		</Exe>
+		<Exe id="1" type="csharp">
+			<Value><![CDATA[[Project:AddNewSwitch_1]]]></Value>
+			<!--<Param type="debug">true</Param>-->
+			<Message></Message>
+		</Exe>
+	</Script>
+</DMSScript>

@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2C13560-420C-4538-9287-D6AD06387685}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutomationScript_ClassLibrary</RootNamespace>
+    <AssemblyName>AutomationScript_ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>
+    </LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Internal\Code Analysis\SonarLint-QuickActions-Inactive.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Internal\Code Analysis\SonarLint-QuickActions-Inactive.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="SLManagedAutomation">
+      <HintPath>C:\Skyline DataMiner\Files\SLManagedAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="SLNetTypes">
+      <HintPath>C:\Skyline DataMiner\Files\SLNetTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="Skyline.DataMiner.Storage.Types">
+      <HintPath>C:\Skyline DataMiner\Files\Skyline.DataMiner.Storage.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="SLLoggerUtil">
+      <HintPath>C:\Skyline DataMiner\Files\SLLoggerUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Skyline DataMiner\ProtocolScripts\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="SLManagedScripting">
+      <HintPath>C:\Skyline DataMiner\Files\SLManagedScripting.dll</HintPath>
+    </Reference>
+    <Content Include="Class Library\manifest.xml" />
+    <Content Include="InteractiveAutomationToolkit\manifest.xml" />
+    <Content Include="Settings.StyleCop" />
+    <Content Include=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Automation\Extensions\ConnectionExtension.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Automation\Extensions\IEngineExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\AtomicDictionary.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Attributes\DllImportAtribute.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Attributes\VersionAttribute.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Agents\Dma.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Agents\IDma.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Communication\ConnectionCommunication.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Communication\ICommunication.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Communication\RemotingCommunication.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Comparers\DmsViewIdComparer.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\AdvancedElementConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\AdvancedServiceConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\DveElementConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ElementConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ElementConnectionCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ElementParamConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ElementParamFilterConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\FailoverElementConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\IElementConnectionCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\IServiceParamConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ParamConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\PropertyConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ServiceConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ServiceParamConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ServiceParamsConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Configurations\ViewConfiguration.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Connections\DmsConnectionInfo.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Connections\IDmsConnectionInfo.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\DmaElementId.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\DmaServiceId.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Dms.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\EnumMapper.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\AgentState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\CompareType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\ConfigurationElementState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\ConnectionType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\ElementAlarmState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\ElementState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\FilterType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\KeyType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\PropertyType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Enums\ProtocolType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\AgentNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\AlarmTemplateNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\DmsException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\ElementNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\ElementStoppedException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\ElementUpdateFailedException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\InvalidDataException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\KeyNotFoundInTableException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\ParameterNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\ProtocolNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\ServiceNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\ServiceOverflowException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\TemplateNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\TrendTemplateNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Exceptions\ViewNotFoundException.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Filters\ColumnFilter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Filters\TableFilter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\HelperClass.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\IDms.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\IDP\ConnectionExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\InputValidator.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\IUpdateAble.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\DmsObject.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ConnectionSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Enums\GpibApi.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Enums\SerialPortFlowControl.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Enums\SerialPortParity.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Enums\SnmpV3AuthenticationAlgorithm.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Enums\SnmpV3EncryptionAlgorithm.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Enums\SnmpV3SecurityLevelAndProtocol.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\HttpConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\IElementConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\IGpibConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\IHttpConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\IOpcConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\IRealConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ISecureShellConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ISerialConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ISmartSerialConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ISnmpConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ISnmpV1Connection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ISnmpV2Connection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ISnmpV3Connection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\ISnmpV3SecurityConfig.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\IVirtualConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\IWebSocketConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Ports\IIpBased.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Ports\IPortConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Ports\ISerial.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Ports\ITcp.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Ports\IUdp.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Ports\Tcp.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\Ports\Udp.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\RealConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\RSA.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\SerialConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\SnmpV1Connection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\SnmpV2Connection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\SnmpV3Connection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\SnmpV3EncryptionAlgorithmAdapter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\SnmpV3SecurityConfig.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\SnmpV3SecurityLevelAndProtocolAdapter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Connections\VirtualConnection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\DmsElement.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\DmsViewSet.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\IDmsElement.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\AdvancedSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\DeviceDetailSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\DveSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\FailoverSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\GeneralSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\IAdvancedSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\IDveSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\IFailoverSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\IRedundancySettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\IReplicationSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\RedundancySettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\ReplicationSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Elements\Settings\Settings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\IDmsObject.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Protocols\DmsProtocol.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Protocols\IDmsProtocol.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Scheduler\DmsScheduler.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Scheduler\DmsSchedulerRepeatType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Scheduler\DmsSchedulerTask.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Scheduler\IDmsScheduler.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Scheduler\IDmsSchedulerTask.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\DmsService.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\IDmsService.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\AdvancedServiceSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\GeneralServiceSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\IAdvancedServiceSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\IReplicationServiceSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\IServiceParamsSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\ReplicationServiceSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\ServiceParamFilterSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\ServiceParamSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\ServiceParamsSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\Settings\ServiceSettings.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\States\IServiceElementState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\States\IServiceState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\States\ServiceElementState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Services\States\ServiceState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\DmsSpectrum.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\DmsSpectrumMeasurementPoints.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\DmsSpectrumMonitors.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\DmsSpectrumPresets.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\DmsSpectrumScripts.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\ExecuteScriptResultHandler.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\IDmsSpectrum.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\IDmsSpectrumMeasurementPoints.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\IDmsSpectrumMonitors.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\IDmsSpectrumPresets.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Spectrum\IDmsSpectrumScripts.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\DmsAlarmTemplate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\DmsAlarmTemplateGroup.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\DmsAlarmTemplateGroupEntry.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\DmsStandaloneAlarmTemplate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\DmsTemplate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\DmsTrendTemplate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\IDmsAlarmTemplate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\IDmsAlarmTemplateGroup.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\IDmsAlarmTemplateGroupEntry.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\IDmsStandaloneAlarmTemplate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\IDmsTemplate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Templates\IDmsTrendTemplate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Views\DmsView.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Objects\Views\IDmsView.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\DmsColumn.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\DmsParameterT.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\DmsStandaloneParameter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\DmsTable.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\DmsTableQueryResult.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\ExtensionsIDmsColumn.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\ExtensionsIDmsStandaloneParameter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\IDmsColumn.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\IDmsColumnT.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\IDmsStandaloneParameter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\IDmsStandaloneParameterT.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\IDmsTable.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Parameters\IDmsTableQueryResult.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\Definition\DmsElementPropertyDefinition.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\Definition\DmsPropertyDefinition.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\Definition\DmsServicePropertyDefinition.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\Definition\DmsViewPropertyDefinition.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\Definition\IDmsElementPropertyDefinition.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\Definition\IDmsPropertyDefinition.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\Definition\IDmsServicePropertyDefinition.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\Definition\IDmsViewPropertyDefinition.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\DmsElementProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\DmsProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\DmsPropertyEntry.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\DmsServiceProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\DmsViewProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\DmsWritableElementProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\DmsWritableServiceProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\DmsWritableViewProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IDmsElementProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IDmsProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IDmsPropertyEntry.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IDmsServiceProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IDmsViewProperty.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IPropertyCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IPropertyConfigurationCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IPropertyDefinitionCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\IWritable.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\PropertyCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\PropertyConfigurationCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\DataMinerSystem\Properties\PropertyDefinitionCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Extensions\Extension.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\CallBulk\IInterAppCall.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\CallBulk\InterAppCall.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\CallBulk\InterAppCallFactory.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\CallBulk\Messages.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\CallSingle\Message.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\CallSingle\MessageFactory.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\MessageExecution\IMessageExecutor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\MessageExecution\MessageExecutor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\MessageExecution\MessageExecutorFactory.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\Shared\ReturnAddress.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\InterAppCalls\Shared\Source.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Logger\Logger.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Rates\Enums\DataConversionType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Rates\Enums\DuplexStatus.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Rates\InterfaceRate.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Rates\InterfaceRate32BitCounters.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Rates\InterfaceRate64BitCounters.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Rates\InterfaceRow.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Rates\InterfaceTable.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Rates\RateCalculator.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Reflection\ReflectionHelper.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Agent.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Cell.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Data\CellAlarmLevel.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Data\CellValue.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Data\ParamAlarmLevel.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Data\ParamValue.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Element.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Param.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Selectors\Service.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Serializing\ISerializer.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Serializing\NoTagSerializing\SerializerBuilder.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Serializing\NoTagSerializing\UsingJsonNewtonSoft\ContractResolverWithPrivates.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Serializing\NoTagSerializing\UsingJsonNewtonSoft\KnownTypesBinder.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Serializing\NoTagSerializing\UsingJsonNewtonSoft\Serializer.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Serializing\NoTagSerializing\XmlSerializerType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Serializing\SerializerFactory.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\SLNetHelper\SLNetUtilitycs.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\SLNetHelper\SLNetWaitHandle.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Element\ElementAlarmLevelMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Element\ElementNameMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Element\ElementStateMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Element\Results\ElementAlarmLevelChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Element\Results\ElementNameChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Element\Results\ElementStateChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Monitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\CellAlarmLevelMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\CellValueMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\CellValueMonitor{T}.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\Helpers\TableCache.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\ParamAlarmLevelMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\ParamValueMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\ParamValueMonitor{T}.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\Results\AlarmLevelChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\Results\CellAlarmLevelChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\Results\CellValueChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\Results\ParamAlarmLevelChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\Results\ParamValueChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\Results\TableValueChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\Results\ValueChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\TableValueMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Parameter\ValueMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Service\Results\ServiceAlarmLevelChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Service\Results\ServiceStateChange.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Service\ServiceAlarmLevelMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\Service\ServiceStateMonitor.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Monitors\SubscriptionManager.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Waiters\ExpectedChanges.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Waiters\InterApp\MessageWaiter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Waiters\Parameter\CellWaiter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Common\Subscription\SLNet\Waiters\Parameter\ParamWaiter.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\DataMinerSystem\Communication\Communication.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Extensions\ConnectionExtension.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Extensions\Monitors\ColumnMonitorExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Extensions\Monitors\ElementMonitorExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Extensions\Monitors\IDmsMonitorExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Extensions\Monitors\ParameterMonitorExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Extensions\Monitors\ServiceMonitorExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Extensions\Monitors\TableMonitorExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Extensions\SLNetConnectionExtensions.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Identifiers\ColumnIdentifier.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\Enums\MatrixCrossPointConnectionState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\Enums\MatrixDisplayType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\Enums\MatrixEditMode.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\Enums\MatrixIOType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixConnections.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixCrossPointSetFromUI.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixCrossPointsSetFromUIMessage.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixCustomTableInfo.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixCustomTableInfoItem.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixHelper.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixHelperForMatrix.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixHelperForMatrixAndTables.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixHelperForTables.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixHelperParameterIds.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixHelperParameterNames.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixInput.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixInputs.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixIOStates.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixIOStateSetFromUIMessage.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixItems.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixLabels.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixLabelSetFromUIMessage.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixLocks.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixLockSetFromUIMessage.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixOutput.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixOutputs.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixPort.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixPortState.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixSearchSingleSetInfo.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixSearchTableInfo.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixSizeInfo.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Matrix\MatrixStatus.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Rates\Enums\DataConversionType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Rates\Enums\SpeedType.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Rates\InterfaceColumns.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Rates\RateCalculator.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Rates\UtilizationColumns.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Rates\ValueColumns.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Protocol\Rates\ValuesToRatesColumns.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Snmp\Trap\BindingCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Snmp\Trap\ReadOnlyTrapInfoVariableBindingCollection.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Snmp\Trap\TrapInfo.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Snmp\Trap\TrapInfoParser.cs" />
+    <Compile Include="Class Library\Skyline\DataMiner\Library\Snmp\Trap\TrapVariableBinding.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\Button.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\Calendar.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\CheckBox.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\CheckBoxList.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\CollapseButton.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\DateTimePicker.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\DropDown.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\InteractiveWidget.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\Label.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\Numeric.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\Parameter.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\PasswordBox.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\RadioButtonList.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\Section.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\TextBox.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\Time.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\TimePicker.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\TimePickerBase.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\TreeView.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\WhiteSpace.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Components\Widget.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Dialogs\Dialog.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Dialogs\ExceptionDialog.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Dialogs\MessageDialog.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Dialogs\ProgressDialog.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Exceptions\OverlappingWidgetsException.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Exceptions\TreeViewDuplicateItemsException.cs" />
+    <Compile Include="InteractiveAutomationToolkit\InteractiveController.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Layout\HorizontalAlignment.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Layout\ILayout.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Layout\IWidgetLayout.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Layout\Margin.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Layout\SectionLayout.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Layout\TextStyle.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Layout\VerticalAlignment.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Layout\WidgetLayout.cs" />
+    <Compile Include="InteractiveAutomationToolkit\Sections\DatePicker.cs" />
+    <Compile Include="InteractiveAutomationToolkit\UiResultsExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AutomationScript_ClassLibrary.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
