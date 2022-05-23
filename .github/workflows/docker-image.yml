@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  deploy_package_job:
+    runs-on: ubuntu-latest
+    name: Deploy the package on the DataMiner System job
+    steps:
+      # To use this action, the repository must be checked out 
+      - name: Checkout	
+        uses: actions/checkout@v3
+      - name: Skyline DataMiner Deploy Action
+        uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@v1.0.0-alpha
+        id: deploy_package_step
+        with:
+          api-key: 'My personal api key'
+          solution-path: './AutomationScript.sln'
+          package-name: 'TestPackage'
+          version: '1.0.0'
+          timeout: '5:00'
