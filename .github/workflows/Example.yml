@@ -33,7 +33,7 @@ jobs:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
           api-key: ${{ secrets.MYAPIKEY }}
           # The path to the .sln file of the solution. Atm only DataMiner Automation Script solutions are supported. E.g ./Example/Script.sln.
-          solution-path: '.AutomationCertification/AutomationScript.sln'
+          solution-path: './AutomationCertification/AutomationScript.sln'
           # The chosen name of the package. E.g. MyPackageName.
           package-name: 'MyScript'
           # The version number for the package (format A.B.C). E.g. 1.0.1.
