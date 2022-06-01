@@ -28,7 +28,7 @@ jobs:
       - name: Skyline DataMiner Deploy Action
         # You may pin to the exact commit or the version.
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
-        uses: ruben12321/Skyline-DataMiner-Deploy-Action@66c8193435fae17afbf7542badf2bdc3b7eaf274
+        uses: ruben12321/Skyline-DataMiner-Deploy-Action@5f405e6abf8c69b2f041fc014ec6665e693f959f
         with:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
           api-key: ${{ secrets.MY_APIKEY }}
