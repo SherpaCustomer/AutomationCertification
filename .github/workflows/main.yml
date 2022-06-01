@@ -31,7 +31,7 @@ jobs:
         uses: ruben12321/Skyline-DataMiner-Deploy-Action@8031ea5de02c1c02df66c1116027445051b86ea2
         with:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
-          api-key: ${{ secrets.MY_APIKEY }}
+          api-key: ${{ secrets.MYAPIKEY }}
           # The path to the .sln file of the solution. Atm only DataMiner Automation Script solutions are supported. E.g ./Example/Script.sln.
           solution-path: AutomationScript.sln
           # The chosen name of the package. E.g. MyPackageName.
