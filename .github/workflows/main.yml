@@ -28,7 +28,7 @@ jobs:
       - name: Skyline DataMiner Deploy Action
         # You may pin to the exact commit or the version.
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
-        uses: ruben12321/Skyline-DataMiner-Deploy-Action@979d372cb1598b9cabc8558a89d16645266fead8
+        uses: ruben12321/Skyline-DataMiner-Deploy-Action@ec62aac11c2dafc165617b2b1eb8a70baf26c571
         env:
           Skyline-deploy-action-namespace: qa
         with:
