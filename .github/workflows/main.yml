@@ -25,10 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Skyline DataMiner Deploy Action
+      - name: Build and publish
+        id: buildAndPublish
         # You may pin to the exact commit or the version.
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
-        uses: ruben12321/Skyline-DataMiner-Deploy-Action@ec62aac11c2dafc165617b2b1eb8a70baf26c571
+        uses: ruben12321/Skyline-DataMiner-Deploy-Action@a4a4f3a005ada033a95c5a61a40cee423814e9b8
         env:
           Skyline-deploy-action-namespace: qa
         with:
@@ -40,3 +41,17 @@ jobs:
           package-name: MyFirstPackage
           # The version number for the package (format A.B.C). E.g. 1.0.1.
           version: 1.0.0
+          stage: BuildAndPublish
+          
+      - name: Deploy
+        # You may pin to the exact commit or the version.
+        # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
+        uses: ruben12321/Skyline-DataMiner-Deploy-Action@a4a4f3a005ada033a95c5a61a40cee423814e9b8
+        env:
+          Skyline-deploy-action-namespace: qa
+        with:
+          # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
+          api-key: ${{ secrets.MYAPIKEY }}
+          stage: Deploy
+          artifact-id: ${{ steps.buildAndPublish.outputs.artifact-id }}
+          
