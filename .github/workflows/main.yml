@@ -35,7 +35,7 @@ jobs:
           Skyline-deploy-action-namespace: qa
         with:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
-          api-key: b6266a9371dc4456a7704cdc422b4604
+          api-key: ${{secrets.RT_TEST}}
           # The path to the .sln file of the solution. Atm only DataMiner Automation Script solutions are supported. E.g ./Example/Script.sln.
           solution-path: AutomationScript.sln
           # The chosen name of the package. E.g. MyPackageName.
@@ -56,6 +56,6 @@ jobs:
           Skyline-deploy-action-namespace: qa
         with:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
-          api-key: b6266a9371dc4456a7704cdc422b4604
+          api-key: ${{secrets.RT_TEST}}
           stage: Deploy
           artifact-id: ${{ needs.build.outputs.artifact-id }}
