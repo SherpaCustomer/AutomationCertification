@@ -31,7 +31,7 @@ jobs:
         id: buildAndPublish
         # You may pin to the exact commit or the version.
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
-        uses: ruben12321/Skyline-DataMiner-Deploy-Action@85cf4115bad98e83ed77713fc4a947dd23573ce0
+        uses: ruben12321/Skyline-DataMiner-Deploy-Action@8a4b90c4944f9529c05ec2c7752b6cd29cf10c41
         env:
           Skyline-deploy-action-namespace: qa
         with:
@@ -53,7 +53,7 @@ jobs:
       - name: Deploy
         # You may pin to the exact commit or the version.
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
-        uses: ruben12321/Skyline-DataMiner-Deploy-Action@85cf4115bad98e83ed77713fc4a947dd23573ce0
+        uses: ruben12321/Skyline-DataMiner-Deploy-Action@8a4b90c4944f9529c05ec2c7752b6cd29cf10c41
         env:
           Skyline-deploy-action-namespace: qa
         with:
