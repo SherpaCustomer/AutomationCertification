@@ -31,12 +31,12 @@ jobs:
         id: buildAndPublish
         # You may pin to the exact commit or the version.
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
-        uses: ruben12321/Skyline-DataMiner-Deploy-Action@b8a5084c6f680403d9155160a0ab0ad481b586e1
+        uses: ruben12321/Skyline-DataMiner-Deploy-Action@21ea640dc1b13d9b0896cbe789bc53a6701876ff
         env:
           Skyline-deploy-action-namespace: qa
         with:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
-          api-key: d9d676acfbad463184534979cbad9fb2
+          api-key: ${{ secrets.MYAPIKEY }}
           # The path to the .sln file of the solution. Atm only DataMiner Automation Script solutions are supported. E.g ./Example/Script.sln.
           solution-path: AutomationScript.sln
           # The chosen name of the package. E.g. MyPackageName.
@@ -53,12 +53,12 @@ jobs:
       - name: Deploy
         # You may pin to the exact commit or the version.
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
-        uses: ruben12321/Skyline-DataMiner-Deploy-Action@b8a5084c6f680403d9155160a0ab0ad481b586e1
+        uses: ruben12321/Skyline-DataMiner-Deploy-Action@21ea640dc1b13d9b0896cbe789bc53a6701876ff
         env:
           Skyline-deploy-action-namespace: qa
         with:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
-          api-key: d9d676acfbad463184534979cbad9fb2
+          api-key: ${{ secrets.MYAPIKEY }}
           stage: Deploy
           artifact-id: ${{ needs.build.outputs.artifact-id }}
           
