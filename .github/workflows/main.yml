@@ -33,7 +33,7 @@ jobs:
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
         uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@v1
         env:
-          Skyline-deploy-action-namespace: dev
+          Skyline-deploy-action-namespace: test2
         with:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
           api-key: ${{ secrets.MYAPIKEY }}
@@ -55,7 +55,7 @@ jobs:
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
         uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@v1
         env:
-          Skyline-deploy-action-namespace: dev
+          Skyline-deploy-action-namespace: test2
         with:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
           api-key: ${{ secrets.MYAPIKEY }}
