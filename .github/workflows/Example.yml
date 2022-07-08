@@ -24,20 +24,23 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      
       - name: Skyline DataMiner Deploy Action
-        env: 
-          Skyline-deploy-action-namespace: dev
         # You may pin to the exact commit or the version.
-        # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@0f5b503984537cb15246e3185612d213a8c3098b
-        uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@v1.0.0-alpha.2
+        # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@226817ebc4a78d73e8189abc9355eeab3daa7557
+        uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action/Actions/Dockerfile@cfcceecf4276db4b48ea031e254cfe4c642a884f
         with:
-          # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
-          api-key: ${{secrets.MYAPIKEY}}
-          # The path to the .sln file of the solution. Atm only DataMiner Automation Script solutions are supported. E.g ./Example/Script.sln.
-          solution-path: './AutomationScript.sln'
-          # The chosen name of the package. E.g. MyPackageName.
-          package-name: 'MyScript'
-          # The version number for the package (format A.B.C). E.g. 1.0.1.
-          version: '1.0.1'
+          # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System, saved in a GitHub secret
+          api-key: ${{ secrets.HERA_KEY }}
+          # The path to the .sln file of the solution. Atm only DataMiner Automation Script solutions are supported. E.g ./Example/Script.sln. Required for stages: All and Upload.
+          solution-path: ./Automation
+          # The chosen name of the package. E.g. MyPackageName.  Required for stages: All, Upload and Deploy.
+          package-name: Automation Package
+          # The version number for the package (format A.B.C). E.g. 1.0.1.  Required for stages: All, Upload and Deploy.
+          version: 1.2.3
+          # The maximum time spend on waiting for the deployment to finish in seconds. E.g. 900.
+          timeout: 300
+          # The specific stage to run in this action. Possible values are: All, Upload, and Deploy. All will run all 3 stages consecutively.
+          stage: All
+      
           
