@@ -33,7 +33,7 @@ jobs:
           # The API-key generated in the DCP Admin app as authentication for a certain DataMiner System, saved in a GitHub secret
           api-key: ${{ secrets.HERA_KEY }}
           # The path to the .sln file of the solution. Atm only DataMiner Automation Script solutions are supported. E.g ./Example/Script.sln. Required for stages: All and Upload.
-          solution-path: ./Automation
+          solution-path: AutomationScript.sln
           # The chosen name of the package. E.g. MyPackageName.  Required for stages: All, Upload and Deploy.
           package-name: Automation Package
           # The version number for the package (format A.B.C). E.g. 1.0.1.  Required for stages: All, Upload and Deploy.
